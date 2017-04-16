@@ -9,6 +9,9 @@
     "type": "git",
     "url": "git+https://github.com/thiagommedeiros/sptrans-server.git"
   },
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "axios": "^0.16.1",
     "body-parser": "^1.17.1",
