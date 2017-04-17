@@ -5,8 +5,8 @@ const endpoint = 'http://api.olhovivo.sptrans.com.br/v0'
 module.exports = function(app) {
 
   app.route('/sptrans').get((req, res) => {
-    var auth = req.headers.cookie;
     var params = req.query;
+    var auth = params.auth;
     var route = params.route;
     var url = endpoint + route;
     delete params['route'];
