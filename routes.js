@@ -3,6 +3,7 @@ var axios = require('axios')
 const endpoint = 'http://api.olhovivo.sptrans.com.br/v0'
 
 module.exports = function(app) {
+
   app.route('/sptrans').get((req, res) => {
     var auth = req.headers.cookie;
     var params = req.query;
@@ -24,6 +25,7 @@ module.exports = function(app) {
       .catch(response => res.send(response));
   });
 
+
   app.route('/sptrans/auth').post((req, res) => {
     var params = req.query;
     var url = endpoint + '/login/autenticar';
@@ -35,7 +37,21 @@ module.exports = function(app) {
     };
 
     axios(config)
-      .then(response => res.send(response))
-      .catch(response => res.send(response));
+      .then(response => {
+        res.send({
+          data: response.data,
+          status: response.status,
+          headers: {
+            'set-cookie': response.headers['set-cookie']
+          }
+        })
+      })
+      .catch(response => {
+        res.send({
+          data: response.data,
+          status: response.status
+        })
+      });
   });
+
 };
