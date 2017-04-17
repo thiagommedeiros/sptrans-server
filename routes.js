@@ -21,7 +21,7 @@ module.exports = function(app) {
 
     axios(config)
       .then(response => res.send(response.data))
-      .catch(response => res.send(response.data));
+      .catch(response => res.send(response));
   });
 
   app.route('/sptrans/auth').post((req, res) => {
@@ -35,7 +35,7 @@ module.exports = function(app) {
     };
 
     axios(config)
-      .then(response => res.send(response.data))
-      .catch(response => res.send(response.data));
+      .then(response => res.send(response))
+      .catch(response => res.send(response));
   });
 };
