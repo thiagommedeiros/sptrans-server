@@ -41,17 +41,10 @@ module.exports = function(app) {
         res.send({
           data: response.data,
           status: response.status,
-          headers: {
-            'set-cookie': response.headers['set-cookie']
-          }
+          auth: response.headers['set-cookie']
         })
       })
-      .catch(response => {
-        res.send({
-          data: response.data,
-          status: response.status
-        })
-      });
+      .catch(response => res.send(response));
   });
 
 };
