@@ -23,4 +23,19 @@ module.exports = function(app) {
       .then(response => res.send(response.data))
       .catch(response => res.send(response.data));
   });
+
+  app.route('/sptrans/auth').post((req, res) => {
+    var params = req.query;
+    var url = endpoint + '/login/autenticar';
+
+    var config = {
+      method: 'post',
+      url: url,
+      params: params
+    };
+
+    axios(config)
+      .then(response => res.send(response.data))
+      .catch(response => res.send(response.data));
+  });
 };
