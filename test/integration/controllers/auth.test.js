@@ -13,7 +13,7 @@ test('should return sptransRes as true to a valid token', async t =>
   })
 )
 
-test('should return sptransRes as true to a invalid token', async t =>
+test('should return sptransRes as false to a invalid token', async t =>
   axios({
     method: 'post',
     url: 'http://localhost:8888/auth',
