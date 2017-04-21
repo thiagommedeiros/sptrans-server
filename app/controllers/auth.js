@@ -1,10 +1,9 @@
 import axios from 'axios'
 
-const endpoint = 'http://api.olhovivo.sptrans.com.br/v0'
+const url = 'http://api.olhovivo.sptrans.com.br/v0/login/autenticar'
 
 export default function auth (req, res) {
   const params = req.query
-  const url = `${endpoint}/login/autenticar`
 
   const config = {
     method: 'post',
@@ -12,13 +11,18 @@ export default function auth (req, res) {
     params
   }
 
-  axios(config)
-    .then(response => {
-      res.send({
-        data: response.data,
-        status: response.status,
-        auth: response.headers['set-cookie']
-      })
+  return axios(config)
+  .then(response => {
+    res.send({
+      sptransRes: response.data,
+      sptransStatus: response.status,
+      auth: response.headers['set-cookie']
     })
-    .catch(response => res.send(response))
+  })
+  .catch(err => {
+    res.send({
+      error: true,
+      message: `O servidor da SPTrans respondeu com erro: ${err.response.status} - ${err.response.statusText}`
+    })
+  })
 }
