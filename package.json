@@ -11,7 +11,7 @@
   },
   "scripts": {
     "nodemon": "nodemon --exec npm run start",
-    "start": "npm run babel-node app/index.js",
+    "start": "node app/index.js",
     "lint": "eslint --config ./.eslintrc app/"
   },
   "dependencies": {
