@@ -10,8 +10,8 @@
     "url": "git+https://github.com/thiagommedeiros/sptrans-server.git"
   },
   "scripts": {
-    "nodemon": "nodemon --exec yarn run babel-node app/index.js",
-    "start": "yarn run babel-node app/index.js",
+    "nodemon": "nodemon --exec npm run start",
+    "start": "npm run babel-node app/index.js",
     "lint": "eslint --config ./.eslintrc app/"
   },
   "dependencies": {
