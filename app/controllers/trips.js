@@ -1,8 +1,16 @@
 import { getData } from '../helpers'
 
 export default async function (req, res) {
-  const id = req.params.id
   const trips = await getData('trips')
-  const filtered = trips.filter(item => item.trip_id === id)
-  res.send(filtered)
+  const tripId = req.params.tripId
+  let response = trips
+  if (tripId) {
+    response = trips.filter(item => {
+      if (item.trip_id.includes(tripId)) {
+        return item
+      }
+      return false
+    })
+  }
+  res.send(response)
 }
