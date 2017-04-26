@@ -11,9 +11,7 @@
   },
   "scripts": {
     "start": "nodemon --exec yarn run babel-node app/index.js",
-    "lint": "eslint --config ./.eslintrc app/ test/",
-    "test": "yarn run test-unit && yarn run test-integration",
-    "test-integration": "./node_modules/ava/cli.js 'test/integration/**/*.test.js'"
+    "lint": "eslint --config ./.eslintrc app/ test/"
   },
   "ava": {
     "require": [
