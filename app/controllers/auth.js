@@ -14,8 +14,8 @@ export default function auth (req, res) {
   return axios(config)
   .then(response => {
     res.send({
-      sptransRes: response.data,
-      sptransStatus: response.status,
+      data: response.data,
+      status: response.status,
       auth: response.headers['set-cookie']
     })
   })
