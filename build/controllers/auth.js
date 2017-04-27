@@ -24,8 +24,8 @@ function auth(req, res) {
 
   return (0, _axios2.default)(config).then(function (response) {
     res.send({
-      sptransRes: response.data,
-      sptransStatus: response.status,
+      data: response.data,
+      status: response.status,
       auth: response.headers['set-cookie']
     });
   }).catch(function (err) {
