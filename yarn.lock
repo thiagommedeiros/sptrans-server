@@ -2917,6 +2917,10 @@ nested-error-stacks@^1.0.0:
   dependencies:
     inherits "~2.0.1"
 
+node-csv-parse@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/node-csv-parse/-/node-csv-parse-1.2.0.tgz#7caa19b74629e22edb83960b8ac32fe56eefb35a"
+
 node-pre-gyp@^0.6.29:
   version "0.6.34"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.6.34.tgz#94ad1c798a11d7fc67381b50d47f8cc18d9799f7"
