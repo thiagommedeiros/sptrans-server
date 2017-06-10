@@ -10,12 +10,16 @@
     "url": "git+https://github.com/thiagommedeiros/sptrans-server.git"
   },
   "scripts": {
-    "build": "babel app -d build --presets es2015,stage-2",
-    "serve": "nodemon app/index.js --exec babel-node",
+    "build": "babel src -d build --presets es2015,stage-2",
+    "serve": "nodemon src/index.js --exec babel-node",
     "start": "node build/index.js",
-    "lint": "eslint --config ./.eslintrc app/"
+    "lint": "eslint --config ./.eslintrc src/",
+    "test": "yarn test-unit && yarn test-integration",
+    "test-unit": "./node_modules/ava/cli.js 'test/unit/**/*.js'",
+    "test-integration": "./node_modules/ava/cli.js 'test/integration/**/*.js'"
   },
   "dependencies": {
+    "ava": "^0.19.1",
     "axios": "0.16.1",
     "body-parser": "1.17.1",
     "express": "4.15.2"
