@@ -2,7 +2,8 @@ import {
   authController,
   findController,
   shapesController,
-  tripsController
+  tripsController,
+  stopsController
 } from './controllers'
 
 export default app => {
@@ -10,4 +11,5 @@ export default app => {
   app.route('/find').get(findController)
   app.route('/shapes/:id*?').get(shapesController)
   app.route('/trips/:tripId*?').get(tripsController)
+  app.route('/stops/:stopId*?').get(stopsController)
 }
