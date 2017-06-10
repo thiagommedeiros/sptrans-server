@@ -14,8 +14,7 @@
     "serve": "nodemon src/index.js --exec babel-node",
     "start": "node build/index.js",
     "lint": "eslint --config ./.eslintrc src/",
-    "test": "yarn test-unit && yarn test-integration",
-    "test-unit": "./node_modules/ava/cli.js 'test/unit/**/*.js'",
+    "test": "yarn test-integration",
     "test-integration": "./node_modules/ava/cli.js 'test/integration/**/*.js'"
   },
   "dependencies": {

@@ -1,16 +1,11 @@
-import { getData } from '../helpers'
+import { getResource } from '../helpers'
 
 export default function (req, res) {
-  getData('trips').then(trips => {
-    const tripId = req.params.tripId
+  getResource('trips').then(trips => {
+    const id = req.params.tripId
     let response = trips
-    if (tripId) {
-      response = trips.filter(item => {
-        if (item.trip_id.includes(tripId)) {
-          return item
-        }
-        return false
-      })
+    if (id) {
+      response = trips.filter(item => item.trip_id.includes(id))
     }
     res.send(response)
   }).catch(err => {
