@@ -1,14 +1,16 @@
-import { getResource } from '../helpers'
+import { csvToJson } from '../helpers'
 
-export default function (req, res) {
-  getResource('stop-times').then(stops => {
-    const stopId = req.params.stopId
-    let response = stops
-    if (stopId) {
-      response = stops.filter(item => item.stop_id.includes(stopId))
-    }
-    res.send(response)
-  }).catch(err => {
-    res.send(err)
-  })
+const file = './src/vendor/stop-times.csv'
+
+function buildResponse (req, stops) {
+  const id = req.params.id
+  if (id) {
+    return stops.filter(item => item.stop_id === id)
+  }
+  return stops
 }
+
+export default (req, res) =>
+  csvToJson(file)
+    .then(stops => res.send(buildResponse(req, stops)))
+    .catch(err => res.send(err))

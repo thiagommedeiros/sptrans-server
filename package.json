@@ -3,7 +3,7 @@
   "author": "Thiago M. Medeiros",
   "version": "1.0.0",
   "license": "MIT",
-  "main": "app/index.js",
+  "main": "build/app.js",
   "homepage": "https://github.com/thiagommedeiros/sptrans-server",
   "repository": {
     "type": "git",
@@ -11,8 +11,8 @@
   },
   "scripts": {
     "build": "babel src -d build --presets es2015,stage-2",
-    "serve": "nodemon src/index.js --exec babel-node",
-    "start": "node build/index.js",
+    "serve": "nodemon src/app.js --exec babel-node",
+    "start": "node build/app.js",
     "lint": "eslint --config ./.eslintrc src/",
     "test": "yarn test-integration",
     "test-integration": "./node_modules/ava/cli.js 'test/integration/**/*.js'"

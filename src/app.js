@@ -1,3 +1,4 @@
+import http from 'http'
 import express from 'express'
 import bodyParser from 'body-parser'
 import routes from './routes'
@@ -14,4 +15,6 @@ app.use(bodyParser.json())
 
 routes(app)
 
-module.exports = app
+http.createServer(app).listen(process.env.PORT || 8888, function () {
+  console.info(`Server is listening on port: ${this.address().port}`)
+})

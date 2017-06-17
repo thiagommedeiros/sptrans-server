@@ -1,5 +1,5 @@
-import getResource from './get-resource'
+import csvToJson from './csvToJson'
 
 module.exports = {
-  getResource
+  csvToJson
 }

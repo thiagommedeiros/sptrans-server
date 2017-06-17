@@ -12,9 +12,7 @@ export default function find (req, res) {
   const config = {
     method: 'get',
     url,
-    headers: {
-      Cookie: auth
-    },
+    headers: { Cookie: auth },
     params
   }
 

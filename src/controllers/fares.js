@@ -1,9 +1,8 @@
-import { getResource } from '../helpers'
+import { csvToJson } from '../helpers'
 
-export default function (req, res) {
-  getResource('fares').then(fares => {
-    res.send(fares)
-  }).catch(err => {
-    res.send(err)
-  })
-}
+const file = './src/vendor/fares.csv'
+
+export default (req, res) =>
+  csvToJson(file)
+    .then(fares => res.send(fares))
+    .catch(err => res.send(err))
