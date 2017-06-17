@@ -1,13 +1,13 @@
 {
-  "name": "sptrans-server",
+  "name": "bus-server",
   "author": "Thiago M. Medeiros",
   "version": "1.0.0",
   "license": "MIT",
   "main": "build/app.js",
-  "homepage": "https://github.com/thiagommedeiros/sptrans-server",
+  "homepage": "https://github.com/thiagommedeiros/bus-server",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thiagommedeiros/sptrans-server.git"
+    "url": "git+https://github.com/thiagommedeiros/bus-server.git"
   },
   "scripts": {
     "build": "babel src -d build --presets es2015,stage-2",
