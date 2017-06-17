@@ -1,11 +1,11 @@
 'use strict';
 
-var _getData = require('./getData');
+var _csvToJson = require('./csvToJson');
 
-var _getData2 = _interopRequireDefault(_getData);
+var _csvToJson2 = _interopRequireDefault(_csvToJson);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = {
-  getData: _getData2.default
+  csvToJson: _csvToJson2.default
 };

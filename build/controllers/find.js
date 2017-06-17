@@ -23,9 +23,7 @@ function find(req, res) {
   var config = {
     method: 'get',
     url: url,
-    headers: {
-      Cookie: auth
-    },
+    headers: { Cookie: auth },
     params: params
   };
 
