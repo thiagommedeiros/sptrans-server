@@ -4,16 +4,24 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-exports.default = function (req, res) {
-  (0, _helpers.getData)('shapes').then(function (shapes) {
-    var id = req.params.id;
-    var response = shapes.filter(function (item) {
+var _helpers = require('../helpers');
+
+var file = './src/vendor/shapes.csv';
+
+function buildResponse(req, shapes) {
+  var id = req.params.id;
+  if (id) {
+    return shapes.filter(function (item) {
       return item.shape_id === id;
     });
-    res.send(response);
+  }
+  return shapes;
+}
+
+exports.default = function (req, res) {
+  return (0, _helpers.csvToJson)(file).then(function (shapes) {
+    return res.send(buildResponse(req, shapes));
   }).catch(function (err) {
-    res.send(err);
+    return res.send(err);
   });
 };
-
-var _helpers = require('../helpers');

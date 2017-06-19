@@ -4,22 +4,24 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _helpers = require('../helpers');
+
+var file = './src/vendor/trips.csv';
+
+function buildResponse(req, stops) {
+  var id = req.params.id;
+  if (id) {
+    return stops.filter(function (item) {
+      return item.trip_id === id;
+    });
+  }
+  return stops;
+}
+
 exports.default = function (req, res) {
-  (0, _helpers.getData)('trips').then(function (trips) {
-    var tripId = req.params.tripId;
-    var response = trips;
-    if (tripId) {
-      response = trips.filter(function (item) {
-        if (item.trip_id.includes(tripId)) {
-          return item;
-        }
-        return false;
-      });
-    }
-    res.send(response);
+  return (0, _helpers.csvToJson)(file).then(function (trips) {
+    return res.send(buildResponse(req, trips));
   }).catch(function (err) {
-    res.send(err);
+    return res.send(err);
   });
 };
-
-var _helpers = require('../helpers');

@@ -1,24 +1,28 @@
 {
-  "name": "sptrans-server",
+  "name": "bus-server",
   "author": "Thiago M. Medeiros",
   "version": "1.0.0",
   "license": "MIT",
-  "main": "app/index.js",
-  "homepage": "https://github.com/thiagommedeiros/sptrans-server",
+  "main": "build/app.js",
+  "homepage": "https://github.com/thiagommedeiros/bus-server",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thiagommedeiros/sptrans-server.git"
+    "url": "git+https://github.com/thiagommedeiros/bus-server.git"
   },
   "scripts": {
-    "build": "babel app -d build --presets es2015,stage-2",
-    "serve": "nodemon app/index.js --exec babel-node",
-    "start": "node build/index.js",
-    "lint": "eslint --config ./.eslintrc app/"
+    "build": "babel src -d build --presets es2015,stage-2",
+    "serve": "nodemon src/app.js --exec babel-node",
+    "start": "node build/app.js",
+    "lint": "eslint --config ./.eslintrc src/",
+    "test": "yarn test-integration",
+    "test-integration": "./node_modules/ava/cli.js 'test/integration/**/*.js'"
   },
   "dependencies": {
+    "ava": "^0.19.1",
     "axios": "0.16.1",
     "body-parser": "1.17.1",
-    "express": "4.15.2"
+    "express": "4.15.2",
+    "node-csv-parse": "^1.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
