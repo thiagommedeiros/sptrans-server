@@ -1,6 +1,6 @@
 import { csvToJson } from '../helpers'
 
-const file = './src/vendor/shapes.csv'
+const file = './src/vendor/shapes.txt'
 
 function buildResponse (req, shapes) {
   const id = req.params.id
