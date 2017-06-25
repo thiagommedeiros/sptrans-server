@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _helpers = require('../helpers');
 
-var file = './src/vendor/trips.csv';
+var file = './src/vendor/trips.txt';
 
 function buildResponse(req, stops) {
   var id = req.params.id;
