@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _helpers = require('../helpers');
 
-var file = './src/vendor/fares_attributes.txt';
+var file = './src/vendor/fare_attributes.txt';
 
 exports.default = function (req, res) {
   return (0, _helpers.csvToJson)(file).then(function (fares) {
