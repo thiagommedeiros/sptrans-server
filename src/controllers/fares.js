@@ -1,6 +1,6 @@
 import { csvToJson } from '../helpers'
 
-const file = './src/vendor/fares_attributes.txt'
+const file = './src/vendor/fare_attributes.txt'
 
 export default (req, res) =>
   csvToJson(file)
