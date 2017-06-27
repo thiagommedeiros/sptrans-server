@@ -1083,7 +1083,6 @@
 "8500-10","1","8500-10","Term. Pirituba - Metrô Barra Funda","3","509E2F","FFFFFF"
 "8528-10","1","8528-10","Jd. Guarani - Pça. Do Correio","3","509E2F","FFFFFF"
 "8538-10","1","8538-10","Freguesia Do Ó - Pça. Do Correio","3","509E2F","FFFFFF"
-"8538-21","1","8538-21","Freguesia Do Ó - Pça. Pedro Corazza","3","509E2F","FFFFFF"
 "8542-10","1","8542-10","Brasilândia - Pça. Do Correio","3","509E2F","FFFFFF"
 "8542-21","1","8542-21","Brasilândia - Term. Lapa","3","509E2F","FFFFFF"
 "8544-10","1","8544-10","Cid. D'abril 3ª Gleba - Pça. Do Correio","3","509E2F","FFFFFF"
