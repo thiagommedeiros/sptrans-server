@@ -7,6 +7,6 @@
 </p>
 
 <p align="center">
-This server responds with the SPTrans GTFS data to the <a href="https://github.com/thiagommedeiros/sptrans-promise">sptrans-promise</a> library.
+This server responds with the SPTrans GTFS data to the <a href="https://github.com/thiagommedeiros/bus-promise">bus-promise</a> library.
 <br>It also responds to browser requests because the SPTrans API does not support CORS.
 </p>
