@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const endpoint = 'http://api.olhovivo.sptrans.com.br/v0'
+const endpoint = 'http://api.olhovivo.sptrans.com.br/v2.1'
 
 export default function find (req, res) {
   const params = req.query

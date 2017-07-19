@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = 'http://api.olhovivo.sptrans.com.br/v0/login/autenticar'
+const url = 'http://api.olhovivo.sptrans.com.br/v2.1/login/autenticar'
 
 export default function auth (req, res) {
   const params = req.query

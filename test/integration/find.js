@@ -2,7 +2,7 @@ import test from 'ava'
 import axios from 'axios'
 
 const port = process.env.PORT || 8888
-const token = '1e7c20905fe86990c5227e7e9f00002fe908d4d4dd4d7c0091032dacd2d0e07d'
+const token = '2d5a4ee1443cb4047633305bf371c72213f6c3aefc9fe3362e42bccb3c01ebf4'
 
 test(`should return an object with first DenominacaoTSTP equal to STA. MÔNICA`, async (t) => {
   const authResponse = await axios({
