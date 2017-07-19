@@ -11,7 +11,7 @@ var _axios2 = _interopRequireDefault(_axios);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var url = 'http://api.olhovivo.sptrans.com.br/v0/login/autenticar';
+var url = 'http://api.olhovivo.sptrans.com.br/v2.1/login/autenticar';
 
 function auth(req, res) {
   var params = req.query;
