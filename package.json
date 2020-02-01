@@ -21,7 +21,7 @@
     "test-integration": "./node_modules/ava/cli.js 'test/integration/**/*.js'"
   },
   "dependencies": {
-    "ava": "^0.19.1",
+    "ava": "^3.0.0",
     "axios": "0.16.1",
     "body-parser": "1.17.1",
     "express": "4.15.2",
